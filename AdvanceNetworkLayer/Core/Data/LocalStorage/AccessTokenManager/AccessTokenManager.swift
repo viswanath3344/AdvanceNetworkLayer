@@ -22,6 +22,6 @@ final class AccessTokenManager: AccessTokenManagerProtocol {
         guard let oldToken = UserDefaults.standard.string(forKey: key) else { return false }
         
         // Verify OldToken is expiry or not.
-        return true
+        return !oldToken.isEmpty
     }
 }

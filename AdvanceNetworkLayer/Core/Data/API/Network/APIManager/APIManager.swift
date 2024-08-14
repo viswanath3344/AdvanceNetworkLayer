@@ -12,37 +12,36 @@ protocol APIManagerProtocol {
     func requestToken() async throws -> Data
 }
 
-// 1
-class APIManager: APIManagerProtocol {
-  // 2
-  private let urlSession: URLSession
 
-  // 3
-  init(urlSession: URLSession = URLSession.shared) {
-    self.urlSession = urlSession
-  }
+// 1
+final class APIManager: APIManagerProtocol {
+    // 2
+    private let urlSession: URLSession
     
-    func perform(
-        _ request: RequestProtocol,
-        authToken: String = ""
-    ) async throws -> Data {
-      // 1
+    // 3
+    init(urlSession: URLSession = URLSession.shared) {
+        self.urlSession = urlSession
+    }
+    
+    func perform(_ request: RequestProtocol, authToken: String = "") async throws -> Data {
+        // 1
         let urlRequest = try request.createURLRequest(authToken: authToken)
         
         let (data, response) = try await urlSession.data(for: urlRequest)
-      // 2
-      guard let httpResponse = response as? HTTPURLResponse,
-        httpResponse.statusCode == 200
-      else {
-        // 3
-        throw NetworkError.invalidServerResponse
-      }
-      return data
+        // 2
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200
+        else {
+            // 3
+            throw NetworkError.invalidServerResponse
+        }
+        
+        return data
     }
-
+    
     func requestToken() async throws -> Data {
-      try await perform(AuthTokenRequest.auth)
+        try await perform(AuthTokenRequest.auth)
     }
-
+    
 }
 
