@@ -27,6 +27,7 @@
 		3F4F51A02C6C930F0036D850 /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4F519F2C6C930F0036D850 /* AccessTokenManager.swift */; };
 		3F4F51A72C6C96420036D850 /* RequestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4F51A62C6C96420036D850 /* RequestManagerProtocol.swift */; };
 		3F4F51A92C6C96C80036D850 /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4F51A82C6C96C80036D850 /* APIToken.swift */; };
+		3F4F51AB2C6F28580036D850 /* dummyjson.com.der in Resources */ = {isa = PBXBuildFile; fileRef = 3F4F51AA2C6D179C0036D850 /* dummyjson.com.der */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		3F4F519F2C6C930F0036D850 /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
 		3F4F51A62C6C96420036D850 /* RequestManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerProtocol.swift; sourceTree = "<group>"; };
 		3F4F51A82C6C96C80036D850 /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
+		3F4F51AA2C6D179C0036D850 /* dummyjson.com.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = dummyjson.com.der; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		3F4F51542C6C74B60036D850 /* AdvanceNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				3F4F51AA2C6D179C0036D850 /* dummyjson.com.der */,
 				3F4F51812C6C76010036D850 /* Core */,
 				3F4F51552C6C74B60036D850 /* AdvanceNetworkLayerApp.swift */,
 				3F4F51572C6C74B60036D850 /* ContentView.swift */,
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4F515D2C6C74B80036D850 /* Preview Assets.xcassets in Resources */,
+				3F4F51AB2C6F28580036D850 /* dummyjson.com.der in Resources */,
 				3F4F515A2C6C74B80036D850 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

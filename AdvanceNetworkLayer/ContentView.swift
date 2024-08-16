@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  AdvanceNetworkLayer
 //
-//  Created by Ponthota, Viswanath Reddy on 14/08/24.
+//  Created by Ponthota, Viswanath Reddy (Cognizant) on 14/08/24.
 //
 
 import SwiftUI
@@ -25,17 +25,20 @@ struct ContentView: View {
         }
     }
     
-    private let requestManager = RequestManager()
-    
     func fetchProducts() async {
-      do {
-        // 1
-        let productsContainer: ProductsContainer =
-          try await requestManager.perform(ProductsRequest.getProducts)
-        // 2
-        self.products = productsContainer.products
-        // 3
-      } catch {}
+        do {
+            // 1
+            let requestManager = RequestManager(
+                apiManager:  APIManager(
+                    urlSession: CustomURLSession().build()
+                )
+            )
+            let productsContainer: ProductsContainer =
+            try await requestManager.perform(ProductsRequest.getProducts)
+            // 2
+            self.products = productsContainer.products
+            // 3
+        } catch {}
     }
 }
 
