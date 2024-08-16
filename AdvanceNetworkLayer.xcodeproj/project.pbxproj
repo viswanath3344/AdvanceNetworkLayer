@@ -28,6 +28,10 @@
 		3F4F51A72C6C96420036D850 /* RequestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4F51A62C6C96420036D850 /* RequestManagerProtocol.swift */; };
 		3F4F51A92C6C96C80036D850 /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4F51A82C6C96C80036D850 /* APIToken.swift */; };
 		3F4F51AB2C6F28580036D850 /* dummyjson.com.der in Resources */ = {isa = PBXBuildFile; fileRef = 3F4F51AA2C6D179C0036D850 /* dummyjson.com.der */; };
+		3FBA03622C6FA8C100499354 /* Hasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA03612C6FA8C100499354 /* Hasher.swift */; };
+		3FBA03652C6FA95400499354 /* URLSessionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA03642C6FA95400499354 /* URLSessionFactory.swift */; };
+		3FBA03672C6FB10100499354 /* URLSessionWithCertificatePinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA03662C6FB10100499354 /* URLSessionWithCertificatePinning.swift */; };
+		3FBA03692C6FB12A00499354 /* URLSessionWithPublicKeyPinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA03682C6FB12A00499354 /* URLSessionWithPublicKeyPinning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		3F4F51A62C6C96420036D850 /* RequestManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerProtocol.swift; sourceTree = "<group>"; };
 		3F4F51A82C6C96C80036D850 /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
 		3F4F51AA2C6D179C0036D850 /* dummyjson.com.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = dummyjson.com.der; sourceTree = "<group>"; };
+		3FBA03612C6FA8C100499354 /* Hasher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hasher.swift; sourceTree = "<group>"; };
+		3FBA03642C6FA95400499354 /* URLSessionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactory.swift; sourceTree = "<group>"; };
+		3FBA03662C6FB10100499354 /* URLSessionWithCertificatePinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWithCertificatePinning.swift; sourceTree = "<group>"; };
+		3FBA03682C6FB12A00499354 /* URLSessionWithPublicKeyPinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWithPublicKeyPinning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +210,7 @@
 				3F4F51852C6C76610036D850 /* APIHost.swift */,
 				3F4F51872C6C77E10036D850 /* NetworkError.swift */,
 				3F4F51A22C6C94690036D850 /* APIManager */,
+				3FBA03632C6FA91500499354 /* SSLPinning */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -271,6 +280,25 @@
 				3F4F51A12C6C938A0036D850 /* AccessTokenManager */,
 			);
 			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		3FBA03632C6FA91500499354 /* SSLPinning */ = {
+			isa = PBXGroup;
+			children = (
+				3FBA036A2C6FB16A00499354 /* Helpers */,
+				3FBA03642C6FA95400499354 /* URLSessionFactory.swift */,
+				3FBA03662C6FB10100499354 /* URLSessionWithCertificatePinning.swift */,
+				3FBA03682C6FB12A00499354 /* URLSessionWithPublicKeyPinning.swift */,
+			);
+			path = SSLPinning;
+			sourceTree = "<group>";
+		};
+		3FBA036A2C6FB16A00499354 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3FBA03612C6FA8C100499354 /* Hasher.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,13 +433,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4F51862C6C76610036D850 /* APIHost.swift in Sources */,
+				3FBA03652C6FA95400499354 /* URLSessionFactory.swift in Sources */,
 				3F4F51802C6C74D00036D850 /* RequestProtocol.swift in Sources */,
+				3FBA03622C6FA8C100499354 /* Hasher.swift in Sources */,
 				3F4F51902C6C7B6F0036D850 /* DataParser.swift in Sources */,
 				3F4F519B2C6C92870036D850 /* RequestManager.swift in Sources */,
+				3FBA03672C6FB10100499354 /* URLSessionWithCertificatePinning.swift in Sources */,
 				3F4F51A92C6C96C80036D850 /* APIToken.swift in Sources */,
 				3F4F51952C6C817F0036D850 /* AuthTokenRequest.swift in Sources */,
 				3F4F51A72C6C96420036D850 /* RequestManagerProtocol.swift in Sources */,
 				3F4F51A02C6C930F0036D850 /* AccessTokenManager.swift in Sources */,
+				3FBA03692C6FB12A00499354 /* URLSessionWithPublicKeyPinning.swift in Sources */,
 				3F4F51982C6C86FB0036D850 /* ProductsRequest.swift in Sources */,
 				3F4F51582C6C74B60036D850 /* ContentView.swift in Sources */,
 				3F4F51562C6C74B60036D850 /* AdvanceNetworkLayerApp.swift in Sources */,
