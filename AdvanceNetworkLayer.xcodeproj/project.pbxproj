@@ -130,7 +130,6 @@
 		3F4F51542C6C74B60036D850 /* AdvanceNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				3F4F51AA2C6D179C0036D850 /* dummyjson.com.der */,
 				3F4F51812C6C76010036D850 /* Core */,
 				3F4F51552C6C74B60036D850 /* AdvanceNetworkLayerApp.swift */,
 				3F4F51572C6C74B60036D850 /* ContentView.swift */,
@@ -285,6 +284,7 @@
 		3FBA03632C6FA91500499354 /* SSLPinning */ = {
 			isa = PBXGroup;
 			children = (
+				3FBA036B2C6FB27300499354 /* Certificate */,
 				3FBA036A2C6FB16A00499354 /* Helpers */,
 				3FBA03642C6FA95400499354 /* URLSessionFactory.swift */,
 				3FBA03662C6FB10100499354 /* URLSessionWithCertificatePinning.swift */,
@@ -299,6 +299,14 @@
 				3FBA03612C6FA8C100499354 /* Hasher.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3FBA036B2C6FB27300499354 /* Certificate */ = {
+			isa = PBXGroup;
+			children = (
+				3F4F51AA2C6D179C0036D850 /* dummyjson.com.der */,
+			);
+			path = Certificate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
